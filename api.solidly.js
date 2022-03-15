@@ -7,7 +7,7 @@ const https = require('https')
 const auth = require('http-auth')
 
 /*  QTdEQTlBMDUwNzMxMTE3MDBFNDcyMTEwODBCOUE5RkEyMzFFNjMyMDhEMTc0NjQ1MEJGMkZDREVCNTU4OTlFQTowQTZDMkQyMkYxNDcwOTNFQ0NERUFFMzE4MTQ5NUE2RjUyNkUzREI1NzBDMkVFQTkzREI5QzEwOEZBQkNFOTc5 */
-var basic = auth.basic({ realm: 'solidly.exchange' }, function (username, password, callback) {
+var basic = auth.basic({ realm: 'printy.wavax.org' }, function (username, password, callback) {
   callback(username === 'A7DA9A05073111700E47211080B9A9FA231E63208D1746450BF2FCDEB55899EA' && password === '0A6C2D22F147093ECCDEAE3181495A6F526E3DB570C2EEA93DB9C108FABCE979')
 })
 
@@ -121,7 +121,7 @@ app.set('port', 80)
 var server = null
 server = require('http').Server(app)
 server.listen(app.get('port'), function () {
-  console.log('api.solidly.exchange',server.address().port)
+  console.log('api.wavax.org',server.address().port)
   module.exports = server
 })
 

@@ -15,19 +15,19 @@ const config = {
   },
 
   tokenLists: [,
-    'https://raw.githubusercontent.com/SpookySwap/spooky-info/master/src/constants/token/spookyswap.json',
+    'https://raw.githubusercontent.com/pangolindex/tokenlists/main/pangolin.tokenlist.json',
     'https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/250/tokens.json',
     'https://unpkg.com/@crocoswap/default-token-list@3.2.1/build/sushiswap-default.tokenlist.json',
-    'https://raw.githubusercontent.com/BoggedFinance/Bogged-Token-List/main/ftm/tokenlist.json'
+    'https://raw.githubusercontent.com/BoggedFinance/Bogged-Token-List/main/avax/tokenlist.json'
   ],
 
-  wftm: {
-    "chainId":250,
-    "name":"Wrapped FTM",
-    "symbol":"WFTM",
-    "address":"0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
+  wavax: {
+    "chainId":43114,
+    "name":"Wrapped AVAX",
+    "symbol":"WAVAX",
+    "address":"0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
     "decimals":18,
-    "logoURI":"https://assets.spookyswap.finance/tokens/wFTM.png"
+    "logoURI":"https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png"
   },
   solidSEX: {
     "chainId":250,
@@ -38,12 +38,13 @@ const config = {
     "logoURI":"https://assets.coingecko.com/coins/images/23992/large/solidSEX.png"
   },
   usdc: {
-    "chainId":250,
+    "chainId":43114,
     "name":"USD Coin",
     "symbol":"USDC",
-    "address":"0x04068DA6C83AFCFA0e13ba15A6696662335D5B75",
+    "address":"0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
     "decimals":6,
-    "logoURI":"https://assets.spookyswap.finance/tokens/USDC.png"
+    "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E/logo.png"
+
   }
 
 }

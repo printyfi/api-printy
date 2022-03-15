@@ -23,7 +23,7 @@ const model = {
       let rawdata = fs.readFileSync('token-list.json');
       let tokenList = JSON.parse(rawdata);
 
-      // get ftm tokens from tokenlists
+      // get avax tokens from tokenlists
       const tokenLists = config.tokenLists
 
       const promises = tokenLists.map(url => request(url));
@@ -104,7 +104,7 @@ const model = {
   async _getAssetPrices(tokenList, pairs) {
     try {
       const key = 'ckey_4f9770735d094a659b29728ff7a'
-      const url = `https://api.covalenthq.com/v1/pricing/tickers/?quote-currency=USD&format=JSON&tickers=USDC,FTM&key=${key}`
+      const url = `https://api.covalenthq.com/v1/pricing/tickers/?quote-currency=USD&format=JSON&tickers=USDC,AVAX&key=${key}`
       const prices = await request(url)
       const dd = JSON.parse(prices)
       const priceList = dd.data.items
@@ -115,16 +115,16 @@ const model = {
         return asset.quote_rate
       })
 
-      const ftmPrice = priceList.filter((asset) => {
-        return asset.contract_ticker_symbol === 'FTM'
+      const avaxPrice = priceList.filter((asset) => {
+        return asset.contract_ticker_symbol === 'AVAX'
       }).reduce((asset) => {
         return asset.quote_rate
       })
 
       const tokenListWithPrices = tokenList.map((token) => {
-        //for ftm and usdc we just return the price we got from covalent
-        if(token.address.toLowerCase() === config.wftm.address.toLowerCase()) {
-          token.priceUSD = ftmPrice.quote_rate
+        //for avax and usdc we just return the price we got from covalent
+        if(token.address.toLowerCase() === config.wavax.address.toLowerCase()) {
+          token.priceUSD = avaxPrice.quote_rate
           return token
         }
         if(token.address.toLowerCase() === config.usdc.address.toLowerCase()) {
@@ -132,7 +132,7 @@ const model = {
           return token
         }
 
-        // get a pair with our base asset (ideally FTM, otherwise we use one of the USD pegs)
+        // get a pair with our base asset (ideally AVAX, otherwise we use one of the USD pegs)
         const tokenPairs = model._getPairsFor(token, pairs)
 
         // if neither, we set $ value to 0 cause fuck that asset.
@@ -168,16 +168,16 @@ const model = {
 
         // for most liquidity, we do reserve0*price/reserve1 where reserve1 is our base asset
         if(maxLiquidityPair.token0.address.toLowerCase() === token.address.toLowerCase()) {
-          if(maxLiquidityPair.token1.address.toLowerCase() === config.wftm.address.toLowerCase()) {
-            pairedAssetPrice = ftmPrice.quote_rate
+          if(maxLiquidityPair.token1.address.toLowerCase() === config.wavax.address.toLowerCase()) {
+            pairedAssetPrice = avaxPrice.quote_rate
           }
           if(maxLiquidityPair.token1.address.toLowerCase() === config.usdc.address.toLowerCase()) {
             pairedAssetPrice = usdcPrice.quote_rate
           }
           price = BigNumber(BigNumber(maxLiquidityPair.reserve1).div(10**maxLiquidityPair.token1.decimals)).times(pairedAssetPrice).div(BigNumber(maxLiquidityPair.reserve0).div(10**maxLiquidityPair.token0.decimals)).toNumber()
         } else if(maxLiquidityPair.token1.address.toLowerCase() === token.address.toLowerCase()) {
-          if(maxLiquidityPair.token0.address.toLowerCase() === config.wftm.address.toLowerCase()) {
-            pairedAssetPrice = ftmPrice.quote_rate
+          if(maxLiquidityPair.token0.address.toLowerCase() === config.wavax.address.toLowerCase()) {
+            pairedAssetPrice = avaxPrice.quote_rate
           }
           if(maxLiquidityPair.token0.address.toLowerCase() === config.usdc.address.toLowerCase()) {
             pairedAssetPrice = usdcPrice.quote_rate
@@ -205,7 +205,7 @@ const model = {
       const relevantPairs = pairs.filter((pair) => {
         return (
             (pair.token0.address.toLowerCase() == token.address.toLowerCase() || pair.token1.address.toLowerCase() == token.address.toLowerCase()) &&
-            (pair.token0.address.toLowerCase() == config.wftm.address.toLowerCase() || pair.token1.address.toLowerCase() == config.wftm.address.toLowerCase() ||
+            (pair.token0.address.toLowerCase() == config.wavax.address.toLowerCase() || pair.token1.address.toLowerCase() == config.wavax.address.toLowerCase() ||
               pair.token0.address.toLowerCase() == config.usdc.address.toLowerCase() || pair.token1.address.toLowerCase() == config.usdc.address.toLowerCase())
           )
       })
@@ -238,7 +238,7 @@ const model = {
   getRouteAssets(req, res, next) {
     try {
       const routeAssets = [
-        config.wftm,
+        config.wavax,
         config.solidSEX
       ]
       res.status(205)

@@ -9,7 +9,7 @@ const bribeABI = require('./bribeABI')
 const tokenABI = require('./tokenABI')
 const veDistABI = require('./veDistABI')
 const minterABI = require('./minterABI')
-const wftmABI = require('./wftmABI')
+const wavaxABI = require('./wavaxABI')
 
 module.exports = {
   erc20ABI,
@@ -23,5 +23,5 @@ module.exports = {
   veDistABI,
   tokenABI,
   minterABI,
-  wftmABI
+  wavaxABI
 }
