@@ -42,7 +42,7 @@ const model = {
       tokensLists = [...tokenList, ...tokensLists]
 
       const removedDuplpicates = tokensLists.filter((t) => {
-        return t.chainId === 250 && t.decimals !== ''
+        return t.chainId === 43114 && t.decimals !== ''
       }).filter((value, index, self) =>
         index === self.findIndex((t) => (
           t.address === value.address
