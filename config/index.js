@@ -2,17 +2,18 @@ require('dotenv').config()
 
 const config = {
 
-  testnet: process.env.TESTNET,
+  testnet: '0',
+  // testnet: process.env.TESTNET,
 
   web3: {
-    provider: process.env.PROVIDER
+    provider: 'https://api.avax.network/ext/bc/C/rpc'
   },
 
-  redis: {
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT,
+  //redis: {
+    //host: process.env.REDIS_HOST,
+    //port: process.env.REDIS_PORT,
     // password: PROCESS.ENV.REDIS_PASSWORD
-  },
+  //},
 
   tokenLists: [,
     'https://raw.githubusercontent.com/pangolindex/tokenlists/main/pangolin.tokenlist.json',

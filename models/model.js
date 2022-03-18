@@ -103,7 +103,7 @@ const model = {
 
   async _getAssetPrices(tokenList, pairs) {
     try {
-      const key = 'ckey_4f9770735d094a659b29728ff7a'
+      const key = 'YOUR_COVALENT_KEY'
       const url = `https://api.covalenthq.com/v1/pricing/tickers/?quote-currency=USD&format=JSON&tickers=USDC,AVAX&key=${key}`
       const prices = await request(url)
       const dd = JSON.parse(prices)
@@ -386,7 +386,9 @@ const model = {
       }
       const extraAssets = JSON.parse(xa)
 
-      const allAssets = [...baseAssets, ...extraAssets]
+      const { tokens } = baseAssets;
+
+      const allAssets = [...tokens, ...extraAssets]
 
       const theBaseAsset = allAssets.filter((as) => {
         return as.address.toLowerCase() === address.toLowerCase()
