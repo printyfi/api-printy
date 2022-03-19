@@ -29,14 +29,7 @@ const config = {
     "address":"0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
     "decimals":18,
     "logoURI":"https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png"
-  },
-  solidSEX: {
-    "chainId":250,
-    "name":"SOLIDsex: Tokenized veSOLID",
-    "symbol":"SOLIDSEX",
-    "address":"0x41adac6c1ff52c5e27568f27998d747f7b69795b",
-    "decimals":18,
-    "logoURI":"https://assets.coingecko.com/coins/images/23992/large/solidSEX.png"
+
   },
   usdc: {
     "chainId":43114,
