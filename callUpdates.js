@@ -3,7 +3,7 @@ const request = require('request-promise')
 
 // const url = process.env.API_URL
 // const url = 'https://api.wavax.org'
-const url = 'http://localhost'
+const url = 'http://localhost:3333'
 
 async function doWork() {
   try {
