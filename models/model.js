@@ -49,8 +49,8 @@ const model = {
         ))
       )
 
-      // const RedisClient = await redisHelper.connect()
-      // const done = await RedisClient.set('baseAssets', JSON.stringify(removedDuplpicates));
+      const RedisClient = await redisHelper.connect()
+       const done = await RedisClient.set('baseAssets', JSON.stringify(removedDuplpicates));
 
       res.status(205)
       res.body = { 'status': 200, 'success': true, 'data': removedDuplpicates }
