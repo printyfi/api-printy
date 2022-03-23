@@ -118,9 +118,9 @@ app.use(function(err, req, res) {
 
 var options = {}
 https.globalAgent.maxSockets = 50
-app.set('port', 443)
+app.set('port', 80)
 var server = null
-server = require('https').Server(app)
+server = require('http').Server(app)
 server.listen(app.get('port'), function () {
   console.log('api.printy.fi',server.address().port)
   module.exports = server
