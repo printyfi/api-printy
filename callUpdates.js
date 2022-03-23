@@ -1,7 +1,7 @@
 require('dotenv').config()
 const request = require('request-promise')
 
-// const url = process.env.API_URL
+ //const url = process.env.API_URL
 const url = 'https://api.printy.fi'
 //const url = 'http://localhost'
 
