@@ -38,7 +38,7 @@ app.all('/health', function(req, res, next) {
 
 app.use(morgan('dev'))
 
-//app.use(auth.connect(basic))
+app.use(auth.connect(basic))
 
 app.use(helmet())
 app.use(compression())
