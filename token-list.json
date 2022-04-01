@@ -1,11 +1,19 @@
 [
     {
       "chainId": 43114,
-      "address": "0x130966628846BFd36ff31a822705796e8cb8C18D",
+      "address": "0xD24C2Ad096400B6FBcd2ad8B24E7acBc21A1da64",
       "decimals": 18,
-      "name": "Magic Internet Money",
-      "symbol": "MIM",
-      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x130966628846BFd36ff31a822705796e8cb8C18D/logo.png"
+      "name": "Frax",
+      "symbol": "FRAX",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xD24C2Ad096400B6FBcd2ad8B24E7acBc21A1da64/logo.png"
+    },
+    {
+      "chainId": 43114,
+      "address": "0xb599c3590F42f8F995ECfa0f85D2980B76862fc1",
+      "decimals": 6,
+      "name": "Wormhole UST",
+      "symbol": "UST.w",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xb599c3590F42f8F995ECfa0f85D2980B76862fc1/logo.png"
     },
     {
       "chainId": 43114,
@@ -14,6 +22,30 @@
       "name": "Dai Stablecoin",
       "symbol": "DAI.e",
       "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xd586E7F844cEa2F87f50152665BCbc2C279D8d70/logo.png"
+    },
+    {
+      "chainId": 43114,
+      "address": "0x22d4002028f537599bE9f666d1c4Fa138522f9c8",
+      "decimals": 18,
+      "name": "Platypus",
+      "symbol": "PTP",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x22d4002028f537599bE9f666d1c4Fa138522f9c8/logo.png"
+    },
+    {
+      "chainId": 43114,
+      "address": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
+      "decimals": 18,
+      "name": "JoeToken",
+      "symbol": "JOE",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd/logo.png"
+    },
+    {
+      "chainId": 43114,
+      "address": "0x130966628846BFd36ff31a822705796e8cb8C18D",
+      "decimals": 18,
+      "name": "Magic Internet Money",
+      "symbol": "MIM",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x130966628846BFd36ff31a822705796e8cb8C18D/logo.png"
     },
     {
       "chainId": 43114,
@@ -30,6 +62,22 @@
       "name": "Wrapped Ether",
       "symbol": "WETH.e",
       "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB/logo.png"
+    },
+    {
+      "chainId": 43114,
+      "address": "0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654",
+      "decimals": 18,
+      "name": "Husky",
+      "symbol": "HUSKY",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654/logo.png"
+    },
+    {
+      "chainId": 43114,
+      "address": "0x60781C2586D68229fde47564546784ab3fACA982",
+      "decimals": 18,
+      "name": "Pangolin",
+      "symbol": "PNG",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x60781C2586D68229fde47564546784ab3fACA982/logo.png"
     },
     {
       "chainId": 43114,
@@ -65,6 +113,14 @@
     },
     {
       "chainId": 43114,
+      "address": "0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654",
+      "decimals": 18,
+      "name": "Husky",
+      "symbol": "HUSKY",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654/logo.png"
+    },
+    {
+      "chainId": 43114,
       "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
       "decimals": 6,
       "name": "USD Coin",
@@ -84,7 +140,7 @@
       "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
       "decimals": 6,
       "name": "TetherToken",
-      "symbol": "USDt",
+      "symbol": "USDT",
       "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7/logo.png"
     }
   ]
