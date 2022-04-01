@@ -1,11 +1,11 @@
-[
+[    
     {
       "chainId": 43114,
-      "address": "0xD24C2Ad096400B6FBcd2ad8B24E7acBc21A1da64",
+      "address": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
       "decimals": 18,
-      "name": "Frax",
-      "symbol": "FRAX",
-      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xD24C2Ad096400B6FBcd2ad8B24E7acBc21A1da64/logo.png"
+      "name": "Dai Stablecoin",
+      "symbol": "DAI.e",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xd586E7F844cEa2F87f50152665BCbc2C279D8d70/logo.png"
     },
     {
       "chainId": 43114,
@@ -17,11 +17,11 @@
     },
     {
       "chainId": 43114,
-      "address": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
+      "address": "0xD24C2Ad096400B6FBcd2ad8B24E7acBc21A1da64",
       "decimals": 18,
-      "name": "Dai Stablecoin",
-      "symbol": "DAI.e",
-      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xd586E7F844cEa2F87f50152665BCbc2C279D8d70/logo.png"
+      "name": "Frax",
+      "symbol": "FRAX",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xD24C2Ad096400B6FBcd2ad8B24E7acBc21A1da64/logo.png"
     },
     {
       "chainId": 43114,
@@ -65,11 +65,11 @@
     },
     {
       "chainId": 43114,
-      "address": "0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654",
+      "address": "0x63a72806098Bd3D9520cC43356dD78afe5D386D9",
       "decimals": 18,
-      "name": "Husky",
-      "symbol": "HUSKY",
-      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654/logo.png"
+      "name": "Aave Token",
+      "symbol": "AAVE.e",
+      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x63a72806098Bd3D9520cC43356dD78afe5D386D9/logo.png"
     },
     {
       "chainId": 43114,
@@ -121,13 +121,21 @@
     },
     {
       "chainId": 43114,
+      "address": "0x7C08413cbf02202a1c13643dB173f2694e0F73f0",
+      "decimals": 9,
+      "name": "Maximizer",
+      "symbol": "MAXI",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x7C08413cbf02202a1c13643dB173f2694e0F73f0/logo.png"
+    },
+    {
+      "chainId": 43114,
       "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
       "decimals": 6,
       "name": "USD Coin",
       "symbol": "USDC",
       "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E/logo.png"
     },
-		{
+    {
       "chainId": 43114,
       "address": "0x888365Cef16Baf8354Bf1A9A88e548555b7348bF",
       "decimals": 18,
