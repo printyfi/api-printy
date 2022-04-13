@@ -150,5 +150,63 @@
       "name": "TetherToken",
       "symbol": "USDT",
       "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7/logo.png"
-    }
-  ]
+    },
+    {
+      "chainId": 43114,
+      "address": "0x249848BeCA43aC405b8102Ec90Dd5F22CA513c06",
+      "decimals": 18,
+      "name": "Curve DAO Token",
+      "symbol": "CRV.e",
+      "logoURI": "https://raw.githubusercontent.com/ava-labs/avalanche-bridge-resources/main/tokens/CRV/logo.png"
+     },
+     {
+      "chainId": 43114,
+      "address": "0xd501281565bf7789224523144Fe5D98e8B28f267",
+      "decimals": 18,
+      "name": "1INCH Token",
+      "symbol": "1INCH.e",
+      "logoURI": "https://raw.githubusercontent.com/ava-labs/avalanche-bridge-resources/main/tokens/1INCH/logo.png"
+     },
+     {
+      "chainId": 43114,
+      "address": "0x9eAaC1B23d935365bD7b542Fe22cEEe2922f52dc",
+      "decimals": 18,
+      "name": "yearn.finance",
+      "symbol": "YFI.e",
+      logoURI": "https://raw.githubusercontent.com/ava-labs/avalanche-bridge-resources/main/tokens/YFI/logo.png"
+     },
+     {
+      "chainId": 43114,
+      "address": "0xc3048E19E76CB9a3Aa9d77D8C03c29Fc906e2437",
+      "decimals": 18,
+      "name": "Compound",
+      "symbol": "COMP.e",
+      "logoURI": "https://raw.githubusercontent.com/ava-labs/avalanche-bridge-resources/main/tokens/COMP/logo.png"
+     },
+     {
+      "chainId": 43114,
+      "address": "0x094bd7B2D99711A1486FB94d4395801C6d0fdDcC",
+      "decimals": 18,
+      "name": "TEDDY",
+      "symbol": "TEDDY",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x094bd7B2D99711A1486FB94d4395801C6d0fdDcC/logo.png"
+     },
+     {
+      "chainId": 43114,
+      "address": "0xDBf31dF14B66535aF65AaC99C32e9eA844e14501",
+      "decimals": 8,
+      "name": "renBTC",
+      "symbol": "renBTC",
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D/logo.png"
+     },
+     {
+      "chainId": 43114,
+      "address": "0x31a0D1A199631D244761EEba67e8501296d2E383",
+      "decimals": 8,
+      "name": "renZEC",
+      "symbol": "renZEC",
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1C5db575E2Ff833E46a2E9864C22F4B22E0B37C2/logo.png"
+     },
+    
+    
+]
