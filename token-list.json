@@ -173,7 +173,7 @@
       "decimals": 18,
       "name": "yearn.finance",
       "symbol": "YFI.e",
-      logoURI": "https://raw.githubusercontent.com/ava-labs/avalanche-bridge-resources/main/tokens/YFI/logo.png"
+      "logoURI": "https://raw.githubusercontent.com/ava-labs/avalanche-bridge-resources/main/tokens/YFI/logo.png"
      },
      {
       "chainId": 43114,
