@@ -207,6 +207,14 @@
       "symbol": "renZEC",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1C5db575E2Ff833E46a2E9864C22F4B22E0B37C2/logo.png"
      },
+     {
+      "chainId": 43114,
+      "address": "0x59414b3089ce2AF0010e7523Dea7E2b35d776ec7",
+      "decimals": 18,
+      "name": "Yak Token",
+      "symbol": "YAK",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x59414b3089ce2AF0010e7523Dea7E2b35d776ec7/logo.png"
+     },
     
     
 ]
