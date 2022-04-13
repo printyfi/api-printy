@@ -1,6 +1,6 @@
 const abis = require("./abis")
 
-module.exports.FACTORY_ADDRESS = '0xc62Ca231Cd2b0c530C622269dA02374134511a36'
+module.exports.FACTORY_ADDRESS = '0xDc72882909252E133a4A46eFB135b3B145366eba'
 module.exports.FACTORY_ABI = abis.factoryABI
 
 module.exports.ROUTER_ADDRESS = '0x6A8f98d7e34Fd214B428BFc68c9309Ea3C4Fc7F1'
