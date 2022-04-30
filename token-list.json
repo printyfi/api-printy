@@ -137,10 +137,10 @@
     },
     {
       "chainId": 43114,
-      "address": "0x888365Cef16Baf8354Bf1A9A88e548555b7348bF",
+      "address": "0x6902a8ecF99a732e5a73491Afc14e5E135eE4234",
       "decimals": 18,
-      "name": "Printy",
-      "symbol": "PRINT",
+      "name": "PrintyV2",
+      "symbol": "PRINTV2",
       "logoURI": "https://fakepunk.xyz/logo192.png"
     },
     {
