@@ -230,6 +230,14 @@
       "name": "Axelar Wrapped LUNA",
       "symbol": "LUNA_ax",
       "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x120AD3e5A7c796349e591F1570D9f7980F4eA9cb/logo.png"
+     },
+     {
+      "chainId": 43114,
+      "address": "0xcf799767d366d789e8B446981C2D578E241fa25c",
+      "decimals": 18,
+      "name": "USDD_multichain",
+      "symbol": "USDD_multibrige",
+      "logoURI": "https://assets.coingecko.com/coins/images/25380/large/UUSD.jpg"
      }
     
     
