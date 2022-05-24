@@ -141,7 +141,7 @@
       "decimals": 18,
       "name": "PrintyV2",
       "symbol": "PRINTV2",
-      "logoURI": "https://fakepunk.xyz/logo192.png"
+      "logoURI": "https://fakepunks.vercel.app/logo192.png"
     },
     {
       "chainId": 43114,
