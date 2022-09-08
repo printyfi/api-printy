@@ -238,7 +238,15 @@
       "name": "USDD_multichainb",
       "symbol": "USDD_multichainb",
       "logoURI": "https://assets.coingecko.com/coins/images/25380/large/UUSD.jpg"
+     },
+     {
+      "chainId": 43114,
+      "address": "0x152b9d0FdC40C096757F570A51E494bd4b943E50",
+      "decimals": 8,
+      "name": "Bitcoin.B",
+      "symbol": "BTC.Bridged",
+      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x152b9d0FdC40C096757F570A51E494bd4b943E50/logo.png"
      }
     
-    
+       
 ]
