@@ -1,9 +1,17 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "api.solidly.js",
+      "use": "@now/node"
+    }
+  ],
   "routes": [
     {
-      "src": "/.*",
-      "dest": "index.js"
+      // Specify which paths will route to a destination using a regex
+      "src": "/(.*)",
+      // Specify the paths' destination
+      "dest": "api.solidly.js"
     }
   ]
 }
