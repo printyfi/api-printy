@@ -2,7 +2,7 @@ require('dotenv').config()
 const request = require('request-promise')
 
  //const url = process.env.API_URL
-const url = 'https://api.printy.fi'
+const url = 'https://api.printyfinance.xyz'
 //const url = 'http://localhost'
 
 async function doWork() {
