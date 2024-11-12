@@ -4,22 +4,22 @@ const routes  = require('./routes/routes')
 const morgan = require('morgan')
 const helmet = require('helmet')
 const https = require('https')
+const fs = require('fs')  // To read SSL certificates
 const auth = require('http-auth')
+const http = require('http')
 
-/*  QTdEQTlBMDUwNzMxMTE3MDBFNDcyMTEwODBCOUE5RkEyMzFFNjMyMDhEMTc0NjQ1MEJGMkZDREVCNTU4OTlFQTowQTZDMkQyMkYxNDcwOTNFQ0NERUFFMzE4MTQ5NUE2RjUyNkUzREI1NzBDMkVFQTkzREI5QzEwOEZBQkNFOTc5 */
- var basic = auth.basic({ realm: 'printyfinance.com' }, function (username, password, callback) {
+// Define basic authentication
+var basic = auth.basic({ realm: 'printyfinance.com' }, function (username, password, callback) {
   callback(username === 'A7DA9A05073111700E47211080B9A9FA231E63208D1746450BF2FCDEB55899EA' && password === '0A6C2D22F147093ECCDEAE3181495A6F526E3DB570C2EEA93DB9C108FABCE979')
-
 })
 
 var app = express()
 
+// CORS headers
 app.all('/*', function(req, res, next) {
-  // CORS headers
   res.set('Content-Type', 'application/json')
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Methods', 'POST,OPTIONS')
-  // Set custom headers for CORS
   res.header('Access-Control-Allow-Headers', 'Content-Type,Accept,Authorization,Username,Password,Signature,X-Access-Token,X-Key')
   if (req.method == 'OPTIONS') {
     res.status(200).end()
@@ -28,6 +28,7 @@ app.all('/*', function(req, res, next) {
   }
 })
 
+// Health check endpoint
 app.all('/health', function(req, res, next) {
   res.status(200)
   res.json({
@@ -38,13 +39,14 @@ app.all('/health', function(req, res, next) {
 
 app.use(morgan('dev'))
 
-app.use(auth.connect(basic))
+app.use(auth.connect(basic))  // Basic Authentication
 
-app.use(helmet())
-app.use(compression())
+app.use(helmet())  // Add security headers
+app.use(compression())  // Enable gzip compression
 
 app.use('/', routes)
 
+// Handle response data
 function handleData(req, res) {
   if (res.statusCode === 205) {
     if (res.body) {
@@ -86,6 +88,8 @@ function handleData(req, res) {
   }
 }
 app.use(handleData)
+
+// Error handling
 app.use(function(err, req, res) {
   if (err) {
     if (res.statusCode == 500) {
@@ -116,14 +120,30 @@ app.use(function(err, req, res) {
   }
 })
 
-var options = {}
-https.globalAgent.maxSockets = 50
+// Setup SSL certificates and HTTPS server
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/api.printyfinance.com/privkey.pem', 'utf8')
+const certificate = fs.readFileSync('/etc/letsencrypt/live/api.printyfinance.com/fullchain.pem', 'utf8')
+const credentials = { key: privateKey, cert: certificate }
+
+// Set HTTP to HTTPS redirect
+app.use(function(req, res, next) {
+  if (req.protocol !== 'https') {
+    return res.redirect('https://' + req.headers.host + req.url);
+  }
+  return next();
+});
+
+// Run HTTP and HTTPS servers
 app.set('port', 3005)
-var server = null
-server = require('http').Server(app)
-server.listen(app.get('port'), function () {
-  console.log('api.printyfinance.com',server.address().port)
-  module.exports = server
+
+// HTTPS Server
+https.createServer(credentials, app).listen(443, function () {
+  console.log('HTTPS server running on port 443')
+})
+
+// HTTP Server for redirect
+http.createServer(app).listen(80, function () {
+  console.log('HTTP server running on port 80')
 })
 
 Array.prototype.contains = function(obj) {
