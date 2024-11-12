@@ -118,11 +118,11 @@ app.use(function(err, req, res) {
 
 var options = {}
 https.globalAgent.maxSockets = 50
-app.set('port', 3001)
+app.set('port', 3005)
 var server = null
-server = require('http').Server(app)
+server = require('https').Server(app)
 server.listen(app.get('port'), function () {
-  console.log('api.printy.fi',server.address().port)
+  console.log('api.printyfinance.com',server.address().port)
   module.exports = server
 })
 
