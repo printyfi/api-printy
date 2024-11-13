@@ -137,8 +137,8 @@ app.use(function(req, res, next) {
 app.set('port', 3005)
 
 // HTTPS Server
-https.createServer(credentials, app).listen(443, function () {
-  console.log('HTTPS server running on port 443')
+https.createServer(credentials, app).listen(3005, function () {
+  console.log('HTTPS server running on port 3005')
 })
 
 // HTTP Server for redirect
