@@ -7,7 +7,7 @@ const https = require('https')
 const auth = require('http-auth')
 
 /*  QTdEQTlBMDUwNzMxMTE3MDBFNDcyMTEwODBCOUE5RkEyMzFFNjMyMDhEMTc0NjQ1MEJGMkZDREVCNTU4OTlFQTowQTZDMkQyMkYxNDcwOTNFQ0NERUFFMzE4MTQ5NUE2RjUyNkUzREI1NzBDMkVFQTkzREI5QzEwOEZBQkNFOTc5 */
- var basic = auth.basic({ realm: 'printyfinance.com' }, function (username, password, callback) {
+ var basic = auth.basic({ realm: 'api.printyfinance.com' }, function (username, password, callback) {
   callback(username === 'A7DA9A05073111700E47211080B9A9FA231E63208D1746450BF2FCDEB55899EA' && password === '0A6C2D22F147093ECCDEAE3181495A6F526E3DB570C2EEA93DB9C108FABCE979')
 
 })
